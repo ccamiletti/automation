@@ -27,7 +27,7 @@ End with an example of getting some data out of the system or using it for a lit
 Before, create these Environment Variables: (After that, reboot your machine if it is necessary)
 
 1.- Create an environment variable called CHROME_DRIVER with the chromedrive.exe url as a value [i.e: c:/user/chromedrive.exe]
-2.- Create an environment variable called WIRECAST with the wirecast.exe installation url as a value [i.e: c:/user/wirecast.exe] /
+2.- Create an environment variable called WIRECAST with the wirecast.exe installation url as a value [i.e: c:/user/wirecast.exe] \
 3.- Create a shortcut of the file "event.cmd"
 
 ## Built With
