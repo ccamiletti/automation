@@ -7,14 +7,15 @@ One Paragraph of project description goes here
 What things you need to install the software and how to install them
 
 ```
-- Java 8
-- chromedriver.exe (it's depend on chrome version) [visit: https://chromedriver.chromium.org/downloads to get the correct version]
+- JDK 8
+- chromedriver.exe
 ```
 
 ### Installing
 
 ```
 Download Java JDK 8 [https://www.oracle.com/java/technologies/javase-jdk8-downloads.html]
+Download chromedriver.exe (it's depend on chrome version) [visit: https://chromedriver.chromium.org/downloads to get the correct version]
 ```
 ```
 until finished
