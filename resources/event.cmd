@@ -6,7 +6,7 @@ ECHO ============================
 ECHO OS INFO
 ECHO ============================
 ECHO Creating Event... It will take less 1 minute. 
-C:\Users\carlo\workspace\automation\Automation\target\createVideo.exe|more
+C:\Users\carlo\workspace\automation\Automation\target\createEvent.exe|more
 ECHO Event was create !!!... please, press a key to exit.
 :: Section 2: Hardware information.
 PAUSE
