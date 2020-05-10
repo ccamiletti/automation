@@ -87,10 +87,11 @@ public class Event {
 			dropdown = driver.findElement(By.xpath("//input[@placeholder='Buscar canales']"));
 			dropdown.sendKeys("unicornio");
 			System.out.println("Selecting channel...: Unicornio");
-			Thread.sleep(1000);
-			dropdown = driver.findElement(By.xpath("//span[text()='Necropsia']"));
-			dropdown.click();
 
+			WebDriverWait wait = new WebDriverWait(driver,10);
+			dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Necropsia']")));
+			dropdown.click();
+			
 			Thread.sleep(1000);
 			WebElement saveButton = driver.findElement(By.xpath("//button[@aria-label='Guardar']")); //driver.find_element_by_xpath(//button[@label='Guardar'])
 			saveButton.click();			
@@ -113,7 +114,7 @@ public class Event {
 			dropdown = driver.findElement(By.xpath("//button[text()=' Iniciar la instalación ']"));
 			dropdown.click();
 
-			WebDriverWait wait = new WebDriverWait(driver,20);
+			wait = new WebDriverWait(driver,20);
 			dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()=' Evento de inicio ']")));
 			dropdown.click();
 
