@@ -8,7 +8,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Event {
 
@@ -107,6 +109,29 @@ public class Event {
 			String href = dropdown.getAttribute("href");
 			
 			Thread.sleep(1000);
+
+			dropdown = driver.findElement(By.xpath("//button[text()=' Iniciar la instalación ']"));
+			dropdown.click();
+
+			WebDriverWait wait = new WebDriverWait(driver,20);
+			dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()=' Evento de inicio ']")));
+			dropdown.click();
+
+			wait = new WebDriverWait(driver,5);
+			dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Quiero iniciar este evento']")));
+			dropdown.click();			
+
+			dropdown = driver.findElement(By.xpath("//button[text()=' Evento de inicio ']"));
+			dropdown.click();
+			
+			wait = new WebDriverWait(driver,20);
+			dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()=' Evento de fin ']")));
+			dropdown.click();			
+
+			//evento de fin popup
+			wait = new WebDriverWait(driver,20);
+			dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()=' Evento de fin ']")));
+			dropdown.click();			
 			
 			Runtime runTime = Runtime.getRuntime();
             String executablePath = System.getenv("WIRECAST"); //"C:/Program Files/Telestream/Wirecast S/WirecastS.exe";  
